@@ -5,8 +5,289 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+  rel="stylesheet"
+/>
 </head>
 <body>
+    <header class="header">
+     <div class="logo">
+        <h1>
+         <i class="ri-stack-fill"></i>
+         professional dashboard
+        </h1>
+     </div>
+     <div class="header-right">
+        <div class="datetime-box">
+            <h3 id="currentdate">
+             Monday , January 1
+            </h3>
+            <h2 id="currenttime">  
+            12:00:00
+            </h2>
+        </div>
+        <div class="whether-box">
+        
+            <h3 id="city">
+                loading..
+            </h3>
+        
+        
+            <h2 id="temperature">
+                --
+            </h2>
+       
+            <p id="condition">
+                please wait..
+            </p>
+            <small  id="humidity">
+           humidity--
+            </small>
+        
+        </div>
+        <button id="themetoggle" class="theme-btn">
+         <i class="ri-moon-line"></i>
+        </button>
+     </div>
+    </header>
+
+   
+     <section id="dashboard">
+     <h2 class="heading">
+       choose your productivity item
+     </h2>
+     <div class="dashboard-grid">
+        <div class=" card feature-card" data-target="todosection">
+        <i class="ri-todo-line"></i>
+        <h3> TO DO LIST </h3>
+        <P>
+            Add,Complete And Manage Tasks
+        </P>
+        </div>
+        <div class="card feature-card" data-target="plannersection">
+        <i class="ri-calendar-2-line"></i>
+        <h3>DAILY PLANNER</h3>
+        <p>
+            plan your day
+        </p>
+        </div>
+        <div class="card feature-card" data-target="pomodorosection">
+        <i class="ri-24-hours-line"></i>
+        <h3>POMODORO</h3>
+        <p>
+            Stay Focus
+        </p>
+        </div>
+        <div class="card feature-card" data-target="motivationsection">
+      <i class="ri-quote-text"></i>
+      <h3>MOTIVATION</h3>
+      <p>
+        Motivated Quotes
+      </p>
+        </div>
+        <div class="card feature-card" data-target="goalssection">
+        <i class="ri-focus-3-fill"></i>
+        <h3> DAILY GOALS</h3>
+        <p>
+            Track Daily Goals
+        </p>
+        </div>
+     
+     
+     <div class="card feature-card" data-target="weathersection">
+    <i class="ri-cloud-line"></i>
+    <h3>WEATHER</h3>
+    <p>Current Weather</p>
+    </div>
+
+</div>
+</section>
+
+
+     <main id="featureContainer">
+        <section id="todosection" class="feature-page hidden">
+        <button class="backbtn">
+        <i class="ri-arrow-left-line"></i>
+        Dashboard
+        </button>
+        <h2>
+            TO-DO LIST
+        </h2>
+        <div class="todo-input">
+            <input type="text" id="taskinput" placeholder="Enter Task">
+            <button id="addtask"> ADD TASK</button>
+        </div>
+        <ul id="taskList"></ul>
+        </section>
+
+        <section id="plannersection" class="feature-page hidden">
+            <button class="backbtn">
+            <i class="ri-arrow-left-line"></i>
+            Dashboard
+            </button>
+         <h2>
+            PLANNER
+         </h2>   
+
+         <div class="planner-container">
+            <div class="planner-row">
+                <span>08:00 AM</span>
+                <input type="text" class="plannerInput" date-time="8">
+            </div>
+            <div class="planner-row">
+                <span>09:00 AM</span>
+                <input type="text" class="plannerInput" date-time="9">
+            </div>
+            <div class="planner-row">
+                <span>10:00 AM</span>
+                <input type="text" class="plannerInput" date-time="10">
+            </div>
+            <div class="planner-row">
+                <span>11:00 AM</span>
+                <input type="text" class="plannerInput" date-time="11">
+            </div>
+            <div class="planner-row">
+                <span>12:00 PM</span>
+                <input type="text" class="plannerInput" date-time="12">
+            </div>
+            <div class="planner-row">
+                <span>01:00 PM</span>
+                <input type="text" class="plannerInput" date-time="13">
+            </div>
+            <div class="planner-row">
+                <span>02:00 PM</span>
+                <input type="text" class="plannerInput" date-time="14">
+            </div>
+            <div class="planner-row">
+                <span>03:00 PM</span>
+                <input type="text" class="plannerInput" date-time="15">
+            </div>
+            <div class="planner-row">
+                <span>04:00 PM</span>
+                <input type="text" class="plannerInput" date-time="16">
+            </div>
+            <div class="planner-row">
+                <span>05:00 PM</span>
+                <input type="text" class="plannerInput" date-time="17">
+            </div>
+         </div>
+        </section>
+
+        <section id="pomodorosection" class="feature-page hidden">
+        <button id="backbtn">
+         <i class="ri-arrow-left-line"></i>
+         Dashboard
+        </button>
+        <h2>
+            POMODORO
+        </h2>
+        <div class="timer-box">
+            <h1 id="timerdisplay">
+             25:00
+            </h1>
+            <p id="sessionType">
+                Work Session
+            </p>  
+        
+        <div class="timer-button">
+            <button id="starttimer">
+             Start
+            </button>
+            <button id="pausetimer">
+             Pause
+            </button>
+            <button id="resettimer">
+             Reset
+            </button>
+            </div>
+        </div>
+        </section>
+
+        <section id="motivationsection" class="feature-page hidden">
+        <button id="backbtn">
+        <i class="ri-arrow-left-line"></i>
+        Dashboard
+        </button>
+        <h2>
+            MOTIVATION
+        </h2>
+        <div class="quote-card">
+            <p id="quotetext">
+                Click the button to get motivation.
+            </p>
+            <h4 id="quoteauthor">
+                -unknown
+            </h4>
+            <button id="newquote">
+                New Quote
+            </button>
+        </div>
+        </section>
+
+        <section id="goalssection" class="feature-page hidden">
+        <button id="backbtn">
+        <i class="ri-arrow-left-line"></i>
+        Dashboard
+        </button>
+        <h2>
+            GOALS
+        </h2>
+
+        <div class="goal-input">
+            <input type="text" id="goalinput" placeholder="Enter your Goals">
+
+            <button id="addgoal">
+              ADD Goals
+            </button>
+        </div>
+        <ul id="goalList">
+        </ul>
+        <div class="goal-progress">
+         <h3 id="goalprogress">
+            0 of 0 Completed
+         </h3>
+           </div>
+
+        </section>
+
+        <section id="weathersection" class="feature-page hidden">
+      <button id="backbtn">
+        <i class="ri-arrow-left-line"></i>
+        Dashboard
+        </button>
+        <h2>
+            WEATHER
+        </h2>
+        <div class="weather-details">
+        <h2 id="weathercityname">
+            loading...
+        </h2>
+        <h1 id="weatherdegree">
+            --
+        </h1>
+        <p id="weatherstatus">
+        please wait
+        </p>
+        <div class="weather-extra">
+            <div class="weather-item">
+           <h4>Humidity</h4>
+           <p id="weatherhumidity">--</p>
+            </div>
+            <div class="weather-item">
+                <h4>Wind</h4>
+                <p id="weatherwind">--</p>
+            </div>
+        </div>
+        </div>
+        </section>
+     </main>
+
+     <footer>
+        <h3>
+        DASHBOARD
+        </h3>
+     </footer>
     <script src="script.js"></script>
 </body>
 </html>
